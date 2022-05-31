@@ -1,0 +1,1 @@
+tiingo_token = '7805c033e3cd1d7e1b3aa071522e811893a28676'

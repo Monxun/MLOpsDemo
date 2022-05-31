@@ -1,0 +1,23 @@
+<div id="modal-backdrop" class="modal-backdrop fade show" style="display:block;"></div>
+<div id="modal" class="modal fade show" tabindex="-1" style="display:block;">
+	<div class="modal-dialog modal-dialog-centered">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title">prediction results</h5>
+		</div>
+		<div class="modal-body">
+            <h5>Prediction Input:</h5>
+            <div>Sepal Length: <span id="sl">{{sepal_length}}</span></div>
+            <div>Sepal Width: <span id="sw">{{sepal_width}}</span></div>
+            <div>Petal Length: <span id="pl">{{petal_length}}</span></div>
+            <div>Petal width: <span id="pw">{{petal_width}}</span></div>
+            <h5 class="pt-3">Prediction Classification:</h5>
+            <div id="prediction">{{result}}</div>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" onclick="closeModal()">Close</button>
+          <a class="btn btn-primary" href="{% url 'iris:results' %}" role="button">View All</a>
+		</div>
+	  </div>
+	</div>
+  </div>

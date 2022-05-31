@@ -1,0 +1,12 @@
+cython
+pandas
+sklearn
+sktime[all_extras]
+lightgbm
+catboost
+ipywidgets
+django
+django-ninja
+django-extensions
+django-widget-tweaks
+bokeh

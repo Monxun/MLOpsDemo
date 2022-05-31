@@ -1,0 +1,8 @@
+pandas==1.0.3
+django-ninja
+django-rest-framework
+django-extensions
+django-htmx
+bokeh
+requests
+lxml

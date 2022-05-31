@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{ ticker }}{% endblock %}
+{% block content %}
+<div class="container text-center">
+    <img class="mt-3" src='https://eodhistoricaldata.com/img/logos/US/{{ ticker }}.png' alt="No Image Available..." width="100px" margin="auto"/>
+    <h1>{{ meta.name }} ({{ ticker }})</h1>
+    <p>Description: {{ meta.description }}</p>
+    <h4>Todays price data for {{ticker}}</h4>
+    <table class="table text-center">
+        <tr><td>Open:</td><td>${{ price.open }}</td></tr>
+        <tr><td>High:</td><td>${{ price.high }}</td></tr>
+        <tr><td>Low:</td><td>${{ price.low }}</td></tr>
+        <tr><td>Close:</td><td>${{ price.close }}</td></tr>
+    </table>
+</div>
+{% endblock %}

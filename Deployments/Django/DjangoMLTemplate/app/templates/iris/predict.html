@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}predict{% endblock %}
+{% block content %}
+    
+    <div class="container pt-5">
+        <div class="row justify-content-md-center">
+            <div class="col-md-4">
+                <h1>Iris Prediction</h1>
+                <form action="" id="post-form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="sepal_length">Sepal Length</label>
+                        <input type="number" step="0.1" class="form-control" id="sepal_length" name="sepal_length" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sepal_width">Sepal Width</label>
+                        <input type="number" step="0.1" class="form-control" id="sepal_width" name="sepal_width" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="petal_length">Petal Length</label>
+                        <input type="number" step="0.1" class="form-control" id="petal_length" name="petal_length" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="petal_width">Petal Width</label>
+                        <input type="number" step="0.1" class="form-control" id="petal_width" name="petal_width" placeholder="" required>
+                    </div>
+                    <button 
+                        type="submit" 
+                        value="Submit" 
+                        class="btn btn-primary mt-3" 
+                        hx-post="{% url 'iris:submit_prediction' %}" 
+                        hx-target="#modals-here" 
+                        hx-trigger="click"
+                        _="on htmx:afterOnLoad wait 10ms then add .show to #modal then add .show to #modal-backdrop">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="modals-here"></div>
+
+{% endblock %}

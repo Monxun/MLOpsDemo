@@ -1,0 +1,26 @@
+{% extends 'base.html' %} 
+{% block title %}charts-line{% endblock %}
+{% block content %}
+    <div class="container text-center">
+        <h1>Line Chart</h1>
+    </div>
+
+    <p class='lead'>GDP by country</p>
+    <div class="row">
+        <div id="linechart" class="col-10">
+            {% include 'partials/chart.html' %}
+        </div>
+        <div class="col-2">
+            <select id="select-year" 
+                    class="form-select" 
+                    name="country" 
+                    autocomplete="off"
+                    hx-get="{% url 'charts:line' %}"
+                    hx-target="#linechart">
+                {% for c in countries %}
+                    <option value="{{c}}" {% if country == c %} selected {% endif %}>{{c}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+{% endblock %}
