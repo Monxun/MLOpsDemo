@@ -1,0 +1,9 @@
+[submodule "Deployments/Ansible/MicheladaML"]
+	path = Deployments/Ansible/MicheladaML
+	url = https://github.com/Monxun/MicheladaML
+[submodule "Deployments/Ansible/JenkinsCluster"]
+	path = Deployments/Ansible/JenkinsCluster
+	url = https://github.com/Monxun/JenkinsCluster
+[submodule "Deployments/Ansible/KubeflowCluster"]
+	path = Deployments/Ansible/KubeflowCluster
+	url = https://github.com/Monxun/KubeflowCluster
